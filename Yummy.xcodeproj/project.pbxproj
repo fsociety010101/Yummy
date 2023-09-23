@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
-		87DE023E2ABEE5DA00B427E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* ContentView.swift */; };
+		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
 		87DE02432ABEE5DC00B427E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE02422ABEE5DC00B427E0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyApp.swift; sourceTree = "<group>"; };
-		87DE023D2ABEE5DA00B427E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
 		87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DE02422ABEE5DC00B427E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */,
-				87DE023D2ABEE5DA00B427E0 /* ContentView.swift */,
+				87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */,
 				87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */,
 				87DE02412ABEE5DC00B427E0 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DE023E2ABEE5DA00B427E0 /* ContentView.swift in Sources */,
+				87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
