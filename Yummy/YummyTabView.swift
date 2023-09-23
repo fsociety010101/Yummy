@@ -9,13 +9,26 @@ import SwiftUI
 
 struct YummyTabView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            YummyListView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            
+            YummyAccountView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Account")
+                }
+            
+            YummyOrderView()
+                .tabItem {
+                    Image(systemName: "bag")
+                    Text("Order")
+                }
         }
-        .padding()
+        .accentColor(Color("brandPrimary"))
     }
 }
 

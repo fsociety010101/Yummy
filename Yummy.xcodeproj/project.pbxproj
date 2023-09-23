@@ -11,6 +11,9 @@
 		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
 		87DE02432ABEE5DC00B427E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE02422ABEE5DC00B427E0 /* Preview Assets.xcassets */; };
+		87DE024A2ABEE6BA00B427E0 /* YummyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE02492ABEE6BA00B427E0 /* YummyListView.swift */; };
+		87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */; };
+		87DE024E2ABEE6D100B427E0 /* YummyOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE024D2ABEE6D100B427E0 /* YummyOrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
 		87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DE02422ABEE5DC00B427E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87DE02492ABEE6BA00B427E0 /* YummyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyListView.swift; sourceTree = "<group>"; };
+		87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyAccountView.swift; sourceTree = "<group>"; };
+		87DE024D2ABEE6D100B427E0 /* YummyOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyOrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		87DE023A2ABEE5DA00B427E0 /* Yummy */ = {
 			isa = PBXGroup;
 			children = (
+				87DE024F2ABEE97600B427E0 /* Views */,
 				87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */,
 				87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */,
 				87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				87DE02422ABEE5DC00B427E0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87DE024F2ABEE97600B427E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87DE02492ABEE6BA00B427E0 /* YummyListView.swift */,
+				87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */,
+				87DE024D2ABEE6D100B427E0 /* YummyOrderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DE024E2ABEE6D100B427E0 /* YummyOrderView.swift in Sources */,
 				87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */,
+				87DE024A2ABEE6BA00B427E0 /* YummyListView.swift in Sources */,
+				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
