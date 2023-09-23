@@ -9,6 +9,7 @@ import Foundation
 
 // Singleton
 final class NetworkManager {
+    
     static let shared = NetworkManager()
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
@@ -23,7 +24,7 @@ final class NetworkManager {
         }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            guard let _ = error else {
+            if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
             }

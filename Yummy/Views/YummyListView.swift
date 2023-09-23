@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct YummyListView: View {
+    
+    @StateObject var viewModel = YummyListViewModel()
+    
     var body: some View {
         NavigationView {
-            List(MockData.meals) { meal in
+            List(viewModel.meals) { meal in
                 MealListCell(meal: meal)
             }
             .navigationTitle("🍔 Yummy")
+        }
+        .onAppear{
+            viewModel.getMeals()
         }
     }
 }
