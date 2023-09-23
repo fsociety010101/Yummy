@@ -59,7 +59,7 @@ final class NetworkManager {
         
         let cacheKey = NSString(string: urlString)
         
-        // if in cache, get it and return
+        // if in cache, get it and retuen
         if let image = cache.object(forKey: cacheKey) {
             completed(image)
             return

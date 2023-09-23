@@ -1,5 +1,5 @@
 //
-//  MealListCell.swift
+//  YummyMealCell.swift
 //  Yummy
 //
 //  Created by Dmytro Nimchynskyi on 23/09/2023.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct MealListCell: View {
+struct YummyMealCell: View {
     
     let meal: Meal
     
     var body: some View {
         HStack {
-            Image("asian-flank-steak")
-                .resizable()
+            YummyRemoteImage(urlString: meal.imageURL)
                 .scaledToFit()
                 .frame(width: 120, height: 90)
                 .cornerRadius(8)
@@ -34,5 +33,5 @@ struct MealListCell: View {
 }
 
 #Preview {
-    MealListCell(meal: MockData.sampleMeal)
+    YummyMealCell(meal: MockData.sampleMeal)
 }

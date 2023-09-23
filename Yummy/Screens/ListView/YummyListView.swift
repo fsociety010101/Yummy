@@ -15,7 +15,7 @@ struct YummyListView: View {
         ZStack {
             NavigationView {
                 List(viewModel.meals) { meal in
-                    MealListCell(meal: meal)
+                    YummyMealCell(meal: meal)
                 }
                 .navigationTitle("🍔 Yummy")
             }
