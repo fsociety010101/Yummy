@@ -15,6 +15,7 @@
 		87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */; };
 		87DE024E2ABEE6D100B427E0 /* YummyOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE024D2ABEE6D100B427E0 /* YummyOrderView.swift */; };
 		87DE02512ABEF12100B427E0 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE02502ABEF12100B427E0 /* Meal.swift */; };
+		87DE02552ABEFC7E00B427E0 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE02542ABEFC7E00B427E0 /* MealListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyAccountView.swift; sourceTree = "<group>"; };
 		87DE024D2ABEE6D100B427E0 /* YummyOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyOrderView.swift; sourceTree = "<group>"; };
 		87DE02502ABEF12100B427E0 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		87DE02542ABEFC7E00B427E0 /* MealListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */,
 				87DE02412ABEE5DC00B427E0 /* Preview Content */,
 				87DE02502ABEF12100B427E0 /* Meal.swift */,
+				87DE02542ABEFC7E00B427E0 /* MealListCell.swift */,
 			);
 			path = Yummy;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				87DE024E2ABEE6D100B427E0 /* YummyOrderView.swift in Sources */,
 				87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */,
 				87DE024A2ABEE6BA00B427E0 /* YummyListView.swift in Sources */,
+				87DE02552ABEFC7E00B427E0 /* MealListCell.swift in Sources */,
 				87DE02512ABEF12100B427E0 /* Meal.swift in Sources */,
 				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,

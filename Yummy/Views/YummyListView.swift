@@ -11,7 +11,7 @@ struct YummyListView: View {
     var body: some View {
         NavigationView {
             List(MockData.meals) { meal in
-                Text(meal.name)
+                MealListCell(meal: meal)
             }
             .navigationTitle("🍔 Yummy")
         }

@@ -24,8 +24,8 @@ struct MealResponse {
 }
 
 struct MockData {
-    static let sampleFood = Meal(id: 1,
-                                      name: "Sample Food Long Name",
+    static let sampleMeal = Meal(id: 1,
+                                      name: "Sample Meal",
                                       description: "Sample short desc",
                                       price: 199.99,
                                       imageURL: "",
@@ -33,5 +33,5 @@ struct MockData {
                                       protein: 12,
                                       carbs: 9)
     
-    static let meals = [sampleFood, sampleFood, sampleFood, sampleFood]
+    static let meals = [sampleMeal, sampleMeal, sampleMeal, sampleMeal]
 }
