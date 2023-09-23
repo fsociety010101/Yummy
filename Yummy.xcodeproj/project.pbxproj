@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87835C552ABF086800B1406F /* YummyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C542ABF086800B1406F /* YummyListViewModel.swift */; };
+		87835C572ABF0D0C00B1406F /* YummyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C562ABF0D0C00B1406F /* YummyAlert.swift */; };
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
 		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		87835C542ABF086800B1406F /* YummyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyListViewModel.swift; sourceTree = "<group>"; };
+		87835C562ABF0D0C00B1406F /* YummyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyAlert.swift; sourceTree = "<group>"; };
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyApp.swift; sourceTree = "<group>"; };
 		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				87DE02502ABEF12100B427E0 /* Meal.swift */,
 				87DE02562ABEFDCC00B427E0 /* NetworkManager.swift */,
 				87DE02582ABEFEC100B427E0 /* YummyError.swift */,
+				87835C562ABF0D0C00B1406F /* YummyAlert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				87DE02592ABEFEC100B427E0 /* YummyError.swift in Sources */,
 				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,
+				87835C572ABF0D0C00B1406F /* YummyAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
