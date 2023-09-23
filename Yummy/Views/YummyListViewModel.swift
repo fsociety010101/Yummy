@@ -11,11 +11,15 @@ final class YummyListViewModel: ObservableObject {
     
     @Published var meals: [Meal] = []
     @Published var alertItem: AlertItem?
+    @Published var isLoading = false
     
     func getMeals() {
+        isLoading = true
+        
         // new in swift 5.3, capture [swift] on top and not use it everywhere around func
         NetworkManager.shared.getMeals { result in
             DispatchQueue.main.async { [self] in
+                isLoading = false
                 switch result {
                 case .success(let meals):
                     self.meals = meals
