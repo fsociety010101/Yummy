@@ -5,12 +5,13 @@
 //  Created by Dmytro Nimchynskyi on 23/09/2023.
 //
 
-import Foundation
+import UIKit
 
 // Singleton
 final class NetworkManager {
     
     static let shared = NetworkManager()
+    private let cache = NSCache<NSString, UIImage>() // cache takes KEY(NSString) and OBJECT(UIImage)
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let mealsURL = baseURL + "appetizers"
@@ -48,6 +49,40 @@ final class NetworkManager {
             } catch {
                 completed(.failure(.invalidData))
             }
+        }
+        
+        task.resume()
+    }
+    
+    
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+        
+        let cacheKey = NSString(string: urlString)
+        
+        // if in cache, get it and return
+        if let image = cache.object(forKey: cacheKey) {
+            completed(image)
+            return
+        }
+        
+        // if URL is bad, return
+        guard let url = URL(string: urlString) else {
+            completed(nil)
+            return
+        }
+        
+        // if not in cache and URL is good, continue getting from URL
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            
+            // if we can get good data, we can create image from that data, if not - return
+            guard let data = data, let image = UIImage(data: data) else {
+                completed(nil)
+                return
+            }
+            
+            // cache retrieved image for future use
+            self.cache.setObject(image, forKey: cacheKey)
+            completed(image)
         }
         
         task.resume()

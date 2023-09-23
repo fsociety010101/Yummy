@@ -58,9 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				87DE02502ABEF12100B427E0 /* Meal.swift */,
-				87DE02562ABEFDCC00B427E0 /* NetworkManager.swift */,
 				87DE02582ABEFEC100B427E0 /* YummyError.swift */,
 				87835C562ABF0D0C00B1406F /* YummyAlert.swift */,
+				87DE02562ABEFDCC00B427E0 /* NetworkManager.swift */,
 				87835C5A2ABF5E7600B1406F /* ColorExtension.swift */,
 			);
 			path = Utilities;
