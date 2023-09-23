@@ -1,5 +1,5 @@
 //
-//  NetworkError.swift
+//  YummyError.swift
 //  Yummy
 //
 //  Created by Dmytro Nimchynskyi on 23/09/2023.
