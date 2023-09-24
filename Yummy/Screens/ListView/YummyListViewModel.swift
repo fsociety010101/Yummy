@@ -12,7 +12,8 @@ final class YummyListViewModel: ObservableObject {
     @Published var meals: [Meal] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
-//    @Published var isShowingDetail = false
+    @Published var isShowingDetail = false
+    @Published var selectedMeal: Meal?
     
     func getMeals() {
         isLoading = true

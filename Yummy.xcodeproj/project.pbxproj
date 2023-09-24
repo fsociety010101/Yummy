@@ -13,6 +13,8 @@
 		87835C5B2ABF5E7600B1406F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C5A2ABF5E7600B1406F /* ColorExtension.swift */; };
 		87835C5D2ABF663700B1406F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C5C2ABF663700B1406F /* RemoteImage.swift */; };
 		87835C692ABF729700B1406F /* YummyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C682ABF729700B1406F /* YummyDetailView.swift */; };
+		87835C6C2AC047E700B1406F /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6B2AC047E700B1406F /* OrderButton.swift */; };
+		87835C6E2AC0490300B1406F /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6D2AC0490300B1406F /* DismissButton.swift */; };
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
 		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		87835C5A2ABF5E7600B1406F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		87835C5C2ABF663700B1406F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		87835C682ABF729700B1406F /* YummyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDetailView.swift; sourceTree = "<group>"; };
+		87835C6B2AC047E700B1406F /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
+		87835C6D2AC0490300B1406F /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyApp.swift; sourceTree = "<group>"; };
 		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		87835C6A2AC047DC00B1406F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				87835C6B2AC047E700B1406F /* OrderButton.swift */,
+				87835C6D2AC0490300B1406F /* DismissButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		87DE022F2ABEE5DA00B427E0 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				87DE02542ABEFC7E00B427E0 /* YummyMealCell.swift */,
+				87835C6A2AC047DC00B1406F /* Buttons */,
 				87835C672ABF6D2900B1406F /* Image */,
 				87835C662ABF6D1B00B1406F /* UIKit Components */,
 			);
@@ -277,10 +291,12 @@
 				87835C692ABF729700B1406F /* YummyDetailView.swift in Sources */,
 				87DE024A2ABEE6BA00B427E0 /* YummyListView.swift in Sources */,
 				87835C552ABF086800B1406F /* YummyListViewModel.swift in Sources */,
+				87835C6E2AC0490300B1406F /* DismissButton.swift in Sources */,
 				87DE02552ABEFC7E00B427E0 /* YummyMealCell.swift in Sources */,
 				87835C592ABF5DB200B1406F /* LoadingView.swift in Sources */,
 				87DE02572ABEFDCC00B427E0 /* NetworkManager.swift in Sources */,
 				87DE02512ABEF12100B427E0 /* Meal.swift in Sources */,
+				87835C6C2AC047E700B1406F /* OrderButton.swift in Sources */,
 				87DE02592ABEFEC100B427E0 /* YummyError.swift in Sources */,
 				87835C5D2ABF663700B1406F /* RemoteImage.swift in Sources */,
 				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,

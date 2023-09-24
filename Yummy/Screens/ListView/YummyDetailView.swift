@@ -29,53 +29,18 @@ struct YummyDetailView: View {
                     .padding()
                 
                 HStack(spacing: 40) {
-                    VStack {
-                        Text("Calories")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(meal.calories)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack {
-                        Text("Carbs")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(meal.carbs)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack {
-                        Text("Protein")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(meal.protein)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
+                    NutritionInfo(title: "Calories", value: meal.calories)
+                    NutritionInfo(title: "Carbs", value: meal.carbs)
+                    NutritionInfo(title: "Protein", value: meal.protein)
                 }
             }
             
             Spacer()
             
             Button {
-                print("tapped")
+                print("tapped order button")
             } label: {
-                Text("$\(meal.price, specifier: "%.2f") - Add To Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color("brandPrimary"))
-                    .cornerRadius(10)
+                OrderButton(title: "$\(meal.price, specifier: "%.2f") - Add To Order")
             }
             .padding(.bottom, 30)
         }
@@ -84,20 +49,30 @@ struct YummyDetailView: View {
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
+            print("tapped dismiss button")
             isShowingDetail = false
         } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.white)
-                    .opacity(0.5)
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .frame(width: 44, height: 44)
-                    .foregroundColor(.black)
-                    .opacity(0.8)
-            }
+            DismissButton()
         }, alignment: .topTrailing)
+    }
+}
+
+struct NutritionInfo: View {
+    
+    let title: String
+    let value: Int
+    
+    var body: some View {
+        VStack {
+            Text(title)
+                .font(.caption)
+                .fontWeight(.bold)
+            
+            Text("\(value)")
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+                .italic()
+        }
     }
 }
 
