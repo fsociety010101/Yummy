@@ -29,6 +29,7 @@ struct YummyListView: View {
                 viewModel.getMeals()
             }
             .blur(radius: isShowingDetail ? 20 : 0)
+            .disabled(isShowingDetail ? true : false)
             
             if isShowingDetail {
                 YummyDetailView(meal: selectedMeal!,
