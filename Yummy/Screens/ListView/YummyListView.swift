@@ -10,12 +10,18 @@ import SwiftUI
 struct YummyListView: View {
     
     @StateObject var viewModel = YummyListViewModel()
+    @State private var isShowingDetail = false
+    @State private var selectedMeal: Meal?
     
     var body: some View {
         ZStack {
             NavigationView {
                 List(viewModel.meals) { meal in
                     YummyMealCell(meal: meal)
+                        .onTapGesture {
+                            selectedMeal = meal
+                            isShowingDetail = true
+                        }
                 }
                 .navigationTitle("🍔 Yummy")
             }
@@ -23,9 +29,15 @@ struct YummyListView: View {
                 viewModel.getMeals()
             }
             
+            if isShowingDetail {
+                YummyDetailView(meal: selectedMeal!,
+                                isShowingDetail: $isShowingDetail)
+            }
+            
             if viewModel.isLoading {
                 LoadingView()
             }
+            
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,

@@ -12,6 +12,7 @@
 		87835C592ABF5DB200B1406F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C582ABF5DB200B1406F /* LoadingView.swift */; };
 		87835C5B2ABF5E7600B1406F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C5A2ABF5E7600B1406F /* ColorExtension.swift */; };
 		87835C5D2ABF663700B1406F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C5C2ABF663700B1406F /* RemoteImage.swift */; };
+		87835C692ABF729700B1406F /* YummyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C682ABF729700B1406F /* YummyDetailView.swift */; };
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
 		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		87835C582ABF5DB200B1406F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		87835C5A2ABF5E7600B1406F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		87835C5C2ABF663700B1406F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		87835C682ABF729700B1406F /* YummyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDetailView.swift; sourceTree = "<group>"; };
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyApp.swift; sourceTree = "<group>"; };
 		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				87835C542ABF086800B1406F /* YummyListViewModel.swift */,
 				87DE02492ABEE6BA00B427E0 /* YummyListView.swift */,
+				87835C682ABF729700B1406F /* YummyDetailView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				87DE024E2ABEE6D100B427E0 /* YummyOrderView.swift in Sources */,
 				87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */,
+				87835C692ABF729700B1406F /* YummyDetailView.swift in Sources */,
 				87DE024A2ABEE6BA00B427E0 /* YummyListView.swift in Sources */,
 				87835C552ABF086800B1406F /* YummyListViewModel.swift in Sources */,
 				87DE02552ABEFC7E00B427E0 /* YummyMealCell.swift in Sources */,
