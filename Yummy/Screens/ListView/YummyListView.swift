@@ -28,6 +28,7 @@ struct YummyListView: View {
             .onAppear{
                 viewModel.getMeals()
             }
+            .blur(radius: isShowingDetail ? 20 : 0)
             
             if isShowingDetail {
                 YummyDetailView(meal: selectedMeal!,
