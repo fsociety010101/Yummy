@@ -13,10 +13,28 @@ struct YummyMealCell: View {
     
     var body: some View {
         HStack {
-            YummyRemoteImage(urlString: meal.imageURL)
-                .scaledToFit()
-                .frame(width: 120, height: 90)
-                .cornerRadius(8)
+            /// old non async method
+            /// if caching is important - use this
+//            YummyRemoteImage(urlString: meal.imageURL)
+//                .scaledToFit()
+//                .frame(width: 120, height: 90)
+//                .cornerRadius(8)
+            
+            /// new async method
+            /// without caching
+            AsyncImage(url: URL(string: meal.imageURL)) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
+                    .cornerRadius(8)
+            } placeholder: {
+                Image("food-placeholder")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
+                    .cornerRadius(8)
+            }
                 
             VStack (alignment: .leading, spacing: 5) {
                 Text(meal.name)
