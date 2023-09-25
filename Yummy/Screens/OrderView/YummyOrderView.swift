@@ -26,8 +26,10 @@ struct YummyOrderView: View {
                     Button {
                         print("tapped place order button")
                     } label: {
-                        OrderButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place order")
+//                        OrderButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place order")
+                        Text("$\(order.totalPrice, specifier: "%.2f") - Place order")
                     }
+                    .modifier(StandardButtonStyle())
                     .padding(.bottom, 30)
                 }
                 

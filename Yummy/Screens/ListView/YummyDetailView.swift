@@ -43,8 +43,17 @@ struct YummyDetailView: View {
                 order.add(meal)
                 isShowingDetail = false
             } label: {
-                OrderButton(title: "$\(meal.price, specifier: "%.2f") - Add To Order")
+//                OrderButton(title: "$\(meal.price, specifier: "%.2f") - Add To Order")
+                
+                Text("$\(meal.price, specifier: "%.2f") - Add To Order")
             }
+//            .buttonStyle(.bordered)
+//            .tint(.brandPrimary)
+//            .controlSize(.large)
+            // or using custom modifiers
+//            .modifier(StandardButtonStyle())
+            // or using extension with custom modifier
+            .yummyButton()
             .padding(.bottom, 30)
         }
         .frame(width: 300, height: 525)

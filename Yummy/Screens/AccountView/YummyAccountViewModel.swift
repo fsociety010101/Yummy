@@ -46,7 +46,6 @@ final class YummyAccountViewModel: ObservableObject {
     }
     
     var isValidForm: Bool {
-        
         guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
             alertItem = AlertContext.invalidUsername
             return false

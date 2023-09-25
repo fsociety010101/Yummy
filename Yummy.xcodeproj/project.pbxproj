@@ -18,6 +18,7 @@
 		87835C702AC050C600B1406F /* YummyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6F2AC050C600B1406F /* YummyAccountViewModel.swift */; };
 		87835C722AC0522700B1406F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C712AC0522700B1406F /* StringExtension.swift */; };
 		87835C742AC05B2500B1406F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C732AC05B2500B1406F /* User.swift */; };
+		87BB90322AC1D1BF00C3467E /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90312AC1D1BF00C3467E /* CustomModifiers.swift */; };
 		87BC69522AC1AF1E00A81351 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC69512AC1AF1E00A81351 /* EmptyState.swift */; };
 		87BC69542AC1B35000A81351 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC69532AC1B35000A81351 /* Order.swift */; };
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
@@ -45,6 +46,7 @@
 		87835C6F2AC050C600B1406F /* YummyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyAccountViewModel.swift; sourceTree = "<group>"; };
 		87835C712AC0522700B1406F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		87835C732AC05B2500B1406F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		87BB90312AC1D1BF00C3467E /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		87BC69512AC1AF1E00A81351 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		87BC69532AC1B35000A81351 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +226,7 @@
 			children = (
 				87DE02542ABEFC7E00B427E0 /* YummyMealCell.swift */,
 				87BC69512AC1AF1E00A81351 /* EmptyState.swift */,
+				87BB90312AC1D1BF00C3467E /* CustomModifiers.swift */,
 				87835C6A2AC047DC00B1406F /* Buttons */,
 				87835C672ABF6D2900B1406F /* Image */,
 				87835C662ABF6D1B00B1406F /* UIKit Components */,
@@ -321,6 +324,7 @@
 				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,
 				87835C722AC0522700B1406F /* StringExtension.swift in Sources */,
+				87BB90322AC1D1BF00C3467E /* CustomModifiers.swift in Sources */,
 				87835C572ABF0D0C00B1406F /* YummyAlert.swift in Sources */,
 				87835C5B2ABF5E7600B1406F /* ColorExtension.swift in Sources */,
 			);
@@ -381,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -438,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -462,8 +466,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,8 +496,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
