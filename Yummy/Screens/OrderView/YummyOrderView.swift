@@ -13,23 +13,30 @@ struct YummyOrderView: View {
     
     var body: some View {
         NavigationView {
-            VStack{
-                List {
-                    ForEach(MockData.sampleMeals) { meal in
-                         YummyMealCell(meal: meal)
+            ZStack {
+                VStack{
+                    List {
+                        ForEach(MockData.sampleMeals) { meal in
+                             YummyMealCell(meal: meal)
+                        }
+                        .onDelete(perform: deleteItems)
                     }
-                    .onDelete(perform: deleteItems)
+                    .listStyle(PlainListStyle())
+                    .navigationTitle("🧾 Orders")
+                    
+                    Button {
+                        print("tapped place order button")
+                    } label: {
+                        OrderButton(title: "Place order")
+                    }
+                    .padding(.bottom, 30)
                 }
-                .listStyle(PlainListStyle())
                 
-                Button {
-                    print("tapped place order button")
-                } label: {
-                    OrderButton(title: "Place order")
+                if orderItems.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in your order. \nAdd some meals first to place the order.")
                 }
-                .padding(.bottom, 30)
             }
-            .navigationTitle("🧾 Orders")
+            
         }
     }
     

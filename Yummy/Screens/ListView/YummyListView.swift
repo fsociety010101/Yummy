@@ -21,6 +21,7 @@ struct YummyListView: View {
                             viewModel.isShowingDetail = true
                         }
                 }
+                .listStyle(PlainListStyle())
                 .navigationTitle("🍔 Yummy")
                 .disabled(viewModel.isShowingDetail ? true : false)
             }
