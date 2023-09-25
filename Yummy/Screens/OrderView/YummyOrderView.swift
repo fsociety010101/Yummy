@@ -9,40 +9,34 @@ import SwiftUI
 
 struct YummyOrderView: View {
     
-    @State private var orderItems = MockData.sampleMeals
+    @EnvironmentObject var order: Order
     
     var body: some View {
         NavigationView {
             ZStack {
                 VStack{
                     List {
-                        ForEach(MockData.sampleMeals) { meal in
+                        ForEach(order.items) { meal in
                              YummyMealCell(meal: meal)
                         }
-                        .onDelete(perform: deleteItems)
+                        .onDelete(perform: order.deleteItems)
                     }
                     .listStyle(PlainListStyle())
-                    .navigationTitle("🧾 Orders")
                     
                     Button {
                         print("tapped place order button")
                     } label: {
-                        OrderButton(title: "Place order")
+                        OrderButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place order")
                     }
                     .padding(.bottom, 30)
                 }
                 
-                if orderItems.isEmpty {
-                    EmptyState(imageName: "empty-order", message: "You have no items in your order. \nAdd some meals first to place the order.")
+                if order.items.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in your order. \nAdd some meals.")
                 }
             }
-            
+            .navigationTitle("🧾 Orders")
         }
-    }
-    
-    
-    func deleteItems(at offsets: IndexSet) {
-        orderItems.remove(atOffsets: offsets)
     }
 }
 

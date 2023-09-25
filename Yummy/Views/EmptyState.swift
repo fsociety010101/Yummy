@@ -12,7 +12,6 @@ struct EmptyState: View {
     let imageName: String
     let message: String
     
-    
     var body: some View {
         ZStack {
             Color(.systemBackground)

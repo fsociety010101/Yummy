@@ -11,12 +11,12 @@ final class YummyAccountViewModel: ObservableObject {
     
     /* Using AppStorage instead of this */
     /*
-    @Published var firstName = ""
-    @Published var lastName = ""
-    @Published var email = ""
-    @Published var birthdate = Date()
-    @Published var extraNapkins = false
-    @Published var frequentRefils = false
+     @Published var firstName = ""
+     @Published var lastName = ""
+     @Published var email = ""
+     @Published var birthdate = Date()
+     @Published var extraNapkins = false
+     @Published var frequentRefils = false
      */
     
     @AppStorage("user") private var userData: Data?

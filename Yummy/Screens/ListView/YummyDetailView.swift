@@ -9,6 +9,8 @@ import SwiftUI
 
 struct YummyDetailView: View {
     
+    @EnvironmentObject var order: Order
+    
     let meal: Meal
     @Binding var isShowingDetail: Bool
     
@@ -38,7 +40,8 @@ struct YummyDetailView: View {
             Spacer()
             
             Button {
-                print("tapped order button")
+                order.add(meal)
+                isShowingDetail = false
             } label: {
                 OrderButton(title: "$\(meal.price, specifier: "%.2f") - Add To Order")
             }
@@ -49,7 +52,6 @@ struct YummyDetailView: View {
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
-            print("tapped dismiss button")
             isShowingDetail = false
         } label: {
             DismissButton()
