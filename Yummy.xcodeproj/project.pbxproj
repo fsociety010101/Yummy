@@ -15,6 +15,9 @@
 		87835C692ABF729700B1406F /* YummyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C682ABF729700B1406F /* YummyDetailView.swift */; };
 		87835C6C2AC047E700B1406F /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6B2AC047E700B1406F /* OrderButton.swift */; };
 		87835C6E2AC0490300B1406F /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6D2AC0490300B1406F /* DismissButton.swift */; };
+		87835C702AC050C600B1406F /* YummyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C6F2AC050C600B1406F /* YummyAccountViewModel.swift */; };
+		87835C722AC0522700B1406F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C712AC0522700B1406F /* StringExtension.swift */; };
+		87835C742AC05B2500B1406F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87835C732AC05B2500B1406F /* User.swift */; };
 		87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */; };
 		87DE023E2ABEE5DA00B427E0 /* YummyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */; };
 		87DE02402ABEE5DC00B427E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE023F2ABEE5DC00B427E0 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 		87835C682ABF729700B1406F /* YummyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDetailView.swift; sourceTree = "<group>"; };
 		87835C6B2AC047E700B1406F /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		87835C6D2AC0490300B1406F /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
+		87835C6F2AC050C600B1406F /* YummyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyAccountViewModel.swift; sourceTree = "<group>"; };
+		87835C712AC0522700B1406F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		87835C732AC05B2500B1406F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		87DE02382ABEE5DA00B427E0 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE023B2ABEE5DA00B427E0 /* YummyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyApp.swift; sourceTree = "<group>"; };
 		87DE023D2ABEE5DA00B427E0 /* YummyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTabView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		87835C612ABF6C3A00B1406F /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
+				87835C6F2AC050C600B1406F /* YummyAccountViewModel.swift */,
 				87DE024B2ABEE6C600B427E0 /* YummyAccountView.swift */,
 			);
 			path = AccountView;
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				87835C5A2ABF5E7600B1406F /* ColorExtension.swift */,
+				87835C712AC0522700B1406F /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				87DE02502ABEF12100B427E0 /* Meal.swift */,
+				87835C732AC05B2500B1406F /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,13 +303,16 @@
 				87835C6E2AC0490300B1406F /* DismissButton.swift in Sources */,
 				87DE02552ABEFC7E00B427E0 /* YummyMealCell.swift in Sources */,
 				87835C592ABF5DB200B1406F /* LoadingView.swift in Sources */,
+				87835C742AC05B2500B1406F /* User.swift in Sources */,
 				87DE02572ABEFDCC00B427E0 /* NetworkManager.swift in Sources */,
 				87DE02512ABEF12100B427E0 /* Meal.swift in Sources */,
+				87835C702AC050C600B1406F /* YummyAccountViewModel.swift in Sources */,
 				87835C6C2AC047E700B1406F /* OrderButton.swift in Sources */,
 				87DE02592ABEFEC100B427E0 /* YummyError.swift in Sources */,
 				87835C5D2ABF663700B1406F /* RemoteImage.swift in Sources */,
 				87DE024C2ABEE6C600B427E0 /* YummyAccountView.swift in Sources */,
 				87DE023C2ABEE5DA00B427E0 /* YummyApp.swift in Sources */,
+				87835C722AC0522700B1406F /* StringExtension.swift in Sources */,
 				87835C572ABF0D0C00B1406F /* YummyAlert.swift in Sources */,
 				87835C5B2ABF5E7600B1406F /* ColorExtension.swift in Sources */,
 			);

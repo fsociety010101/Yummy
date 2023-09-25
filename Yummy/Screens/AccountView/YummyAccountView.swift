@@ -9,43 +9,56 @@ import SwiftUI
 
 struct YummyAccountView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
-    @State private var birthdate = Date()
-    @State private var extraNapkins = false
-    @State private var frequentRefils = false
+    @StateObject var viewModel = YummyAccountViewModel()
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info")) {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email Address", text: $email)
+                    TextField("First Name", text: $viewModel.user.firstName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
+                    TextField("Email Address", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
-                        .textInputAutocapitalization(.none)
+                        .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
-                    DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
+                    DatePicker("Date of Birth", selection: $viewModel.user.birthdate, displayedComponents: .date)
                     
                     Button {
-                        print("Save")
+                        viewModel.saveChanges()
+                        hideKeyboard()
                     } label: {
                         Text("Save Changes")
                     }
                 }
                 
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $extraNapkins)
-                    Toggle("Frequent Refils", isOn: $frequentRefils)
+                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Frequent Refils", isOn: $viewModel.user.frequentRefils)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: Color("brandPrimary")))
                     
             }
             .navigationTitle("👽 Account")
+            .scrollDismissesKeyboard(.interactively)
+        }
+        .onAppear {
+            viewModel.retrieveUser()
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
 
 #Preview {
     YummyAccountView()

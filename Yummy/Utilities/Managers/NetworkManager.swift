@@ -53,7 +53,7 @@ final class NetworkManager {
         
         task.resume()
     }
-    
+
     
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
         
