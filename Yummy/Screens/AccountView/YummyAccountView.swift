@@ -38,7 +38,7 @@ struct YummyAccountView: View {
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     
-                    DatePicker("Date of Birth", 
+                    DatePicker("Date of Birth",
                                selection: $viewModel.user.birthdate,
                                displayedComponents: .date)
                     
@@ -55,10 +55,16 @@ struct YummyAccountView: View {
                     Toggle("Frequent Refils", isOn: $viewModel.user.frequentRefils)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: Color("brandPrimary")))
-                    
+                
             }
             .navigationTitle("👽 Account")
-
+            .scrollDismissesKeyboard(.interactively)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss") { focusedTextField = nil }
+                }
+            }
+            
         }
         .onAppear {
             viewModel.retrieveUser()
