@@ -77,5 +77,5 @@ struct NutritionInfo: View {
 }
 
 #Preview {
-    YummyDetailView(meal: MockData.sampleMeal, isShowingDetail: .constant(true))
+    YummyDetailView(meal: MockData.sampleMeal1, isShowingDetail: .constant(true))
 }

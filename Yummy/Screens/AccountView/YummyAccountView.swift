@@ -32,7 +32,7 @@ struct YummyAccountView: View {
                 }
                 
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Order Confirmation Call", isOn: $viewModel.user.confirmationCall)
                     Toggle("Frequent Refils", isOn: $viewModel.user.frequentRefils)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: Color("brandPrimary")))

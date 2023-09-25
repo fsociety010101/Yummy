@@ -33,5 +33,5 @@ struct YummyMealCell: View {
 }
 
 #Preview {
-    YummyMealCell(meal: MockData.sampleMeal)
+    YummyMealCell(meal: MockData.sampleMeal1)
 }

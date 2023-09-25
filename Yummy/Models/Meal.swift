@@ -24,8 +24,16 @@ struct MealResponse: Decodable {
 }
 
 struct MockData {
-    static let sampleMeal = Meal(id: 1,
-                                      name: "Sample Meal",
+    static let sampleMeal1 = Meal(id: 1,
+                                      name: "Sample Meal3",
+                                      description: "Sample short desc",
+                                      price: 199.99,
+                                      imageURL: "",
+                                      calories: 74,
+                                      protein: 12,
+                                      carbs: 9)
+    static let sampleMeal2 = Meal(id: 2,
+                                      name: "Sample Meal2",
                                       description: "Sample short desc",
                                       price: 199.99,
                                       imageURL: "",
@@ -33,5 +41,14 @@ struct MockData {
                                       protein: 12,
                                       carbs: 9)
     
-    static let meals = [sampleMeal, sampleMeal, sampleMeal, sampleMeal]
+    static let sampleMeal3 = Meal(id: 3,
+                                      name: "Sample Meal3",
+                                      description: "Sample short desc",
+                                      price: 199.99,
+                                      imageURL: "",
+                                      calories: 74,
+                                      protein: 12,
+                                      carbs: 9)
+    
+    static let sampleMeals = [sampleMeal1, sampleMeal2, sampleMeal3]
 }
