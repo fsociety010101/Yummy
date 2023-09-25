@@ -25,7 +25,7 @@ struct YummyListView: View {
                 .listStyle(.plain)
                 .disabled(viewModel.isShowingDetail)
             }
-            .onAppear{
+            .task {
                 viewModel.getMeals()
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)

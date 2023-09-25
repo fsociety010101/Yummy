@@ -7,17 +7,19 @@
 
 import UIKit
 
-// Singleton
+/// Singleton
 final class NetworkManager {
     
     static let shared = NetworkManager()
-    private let cache = NSCache<NSString, UIImage>() // cache takes KEY(NSString) and OBJECT(UIImage)
+    private let cache = NSCache<NSString, UIImage>() /// cache takes KEY(NSString) and OBJECT(UIImage)
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let mealsURL = baseURL + "appetizers"
     
     private init() {}
     
+    /// "old" non async way
+    /*
     func getMeals(completed: @escaping (Result<[Meal], YummyError>) -> Void) {
         guard let url = URL(string: mealsURL) else {
             completed(.failure(.invalidURL))
@@ -53,13 +55,30 @@ final class NetworkManager {
         
         task.resume()
     }
-
+    */
+    
+    
+    func getMeals() async throws -> [Meal] {
+        guard let url = URL(string: mealsURL) else {
+            throw YummyError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(MealResponse.self, from: data).request
+        } catch {
+            throw YummyError.invalidData
+        }
+    }
+    
     
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
         
         let cacheKey = NSString(string: urlString)
         
-        // if in cache, get it and retuen
+        // if in cache, get it and return
         if let image = cache.object(forKey: cacheKey) {
             completed(image)
             return
